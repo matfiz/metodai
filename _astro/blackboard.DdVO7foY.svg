@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 500" width="1800" height="500" fill="#000" stroke="#000" stroke-linecap="round" stroke-linejoin="round" font-family="Charter, 'Bitstream Charter', 'Sitka Text', Cambria, Georgia, 'DejaVu Serif', serif">
+<!-- The page-top blackboard, as in Linear Algebra and General Mathematics. Used as a CSS mask (black = ink), so its colour comes from the theme. The formulas are standard results of the four parts in the course's conventions (notes/notation-bible.md): the unitary negative-forward Fourier transform (§7), the 0⁻ Laplace convention (§9), Abel's identity W′ = −PW, the Sturm–Liouville reference form (§10) and the free diffusion kernel with diffusivity D and source variables ξ, t₀ (§11). The drawings are a closed contour around two poles (Part II) and the spreading heat kernel (Part IV). -->
+<g stroke="none">
+<text x="40" y="70" font-size="36" font-style="italic" transform="rotate(-2 40 70)">∮<tspan baseline-shift="sub" font-size="0.62em">C</tspan> f(z) dz = 2πi Σ<tspan baseline-shift="sub" font-size="0.62em">k</tspan> <tspan font-style="normal">Res</tspan><tspan baseline-shift="sub" font-size="0.62em">z=a<tspan font-size="0.8em">k</tspan></tspan> f</text>
+<text x="52" y="126" font-size="24" font-style="italic" transform="rotate(-1 52 126)"><tspan font-style="normal">Res</tspan><tspan baseline-shift="sub" font-size="0.7em">z=a</tspan> f = <tspan font-style="normal">lim</tspan><tspan baseline-shift="sub" font-size="0.7em">z→a</tspan> (z − a) f(z)</text>
+<text x="40" y="186" font-size="28" font-style="italic" transform="rotate(1 40 186)">f̂(k) = (2π)<tspan baseline-shift="super" font-size="0.62em">−1/2</tspan> ∫ e<tspan baseline-shift="super" font-size="0.62em">−ikx</tspan> f(x) dx</text>
+<text x="40" y="248" font-size="28" font-style="italic" transform="rotate(-1 40 248)">ℒ[f′](s) = sF(s) − f(0<tspan baseline-shift="super" font-size="0.62em">−</tspan>)</text>
+<text x="52" y="302" font-size="24" font-style="italic" transform="rotate(1 52 302)">W′ = −P W ,   x(t) = e<tspan baseline-shift="super" font-size="0.62em">tA</tspan>x<tspan baseline-shift="sub" font-size="0.7em">0</tspan></text>
+<text x="40" y="362" font-size="28" font-style="italic" transform="rotate(-1 40 362)">Γ(z + 1) = z Γ(z)</text>
+<text x="52" y="420" font-size="24" font-style="italic" transform="rotate(1 52 420)">y″ + p(x) y′ + q(x) y = 0</text>
+
+<text x="930" y="76" font-size="34" font-style="italic" transform="rotate(-1 930 76)">∂<tspan baseline-shift="sub" font-size="0.62em">t</tspan>u = D ∇<tspan baseline-shift="super" font-size="0.62em">2</tspan>u</text>
+<text x="1240" y="70" font-size="24" font-style="italic" transform="rotate(1 1240 70)">u(x) = ∫ G(x, ξ) f(ξ) dξ</text>
+<text x="940" y="138" font-size="26" font-style="italic" transform="rotate(1 940 138)">K = [4πD(t − t<tspan baseline-shift="sub" font-size="0.7em">0</tspan>)]<tspan baseline-shift="super" font-size="0.62em">−1/2</tspan> e<tspan baseline-shift="super" font-size="0.62em">−(x−ξ)²/4D(t−t₀)</tspan></text>
+<text x="930" y="204" font-size="28" font-style="italic" transform="rotate(-1 930 204)">∂L/∂y − (d/dx) ∂L/∂y′ = 0</text>
+<text x="945" y="262" font-size="24" font-style="italic" transform="rotate(1 945 262)">−(p y′)′ + q y = λ w y</text>
+<text x="930" y="324" font-size="28" font-style="italic" transform="rotate(-1 930 324)">x<tspan baseline-shift="super" font-size="0.62em">2</tspan>y″ + x y′ + (x<tspan baseline-shift="super" font-size="0.62em">2</tspan> − ν<tspan baseline-shift="super" font-size="0.62em">2</tspan>) y = 0</text>
+<text x="945" y="384" font-size="26" font-style="italic" transform="rotate(1 945 384)">n! ∼ √(2πn) (n/e)<tspan baseline-shift="super" font-size="0.62em">n</tspan></text>
+<text x="930" y="440" font-size="24" font-style="italic" transform="rotate(-1 930 440)">δS = 0</text>
+</g>
+
+<!-- Part II: a closed contour, the upper semicircle C_R, around two poles. -->
+<g fill="none" stroke-width="1.6">
+<path d="M560 360 H880"/>
+<path d="M600 440 V140"/>
+<path d="M870 355 L880 360 L870 365"/>
+<path d="M595 150 L600 140 L605 150"/>
+<path d="M610 360 A110 110 0 0 1 830 360" stroke-width="2"/>
+<path d="M610 360 H830" stroke-width="2"/>
+<path d="M712 355 L722 360 L712 365" stroke-width="2"/>
+<path d="M728 245 L718 250 L728 255" stroke-width="2"/>
+<path d="M670 312 l12 12 M682 312 l-12 12"/>
+<path d="M756 292 l12 12 M768 292 l-12 12"/>
+</g>
+<g stroke="none" font-style="italic" font-size="20">
+<text x="810" y="268">C<tspan baseline-shift="sub" font-size="0.7em">R</tspan></text>
+<text x="612" y="152">Im z</text>
+<text x="842" y="390">Re z</text>
+<text x="652" y="306" font-size="17">a<tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
+<text x="772" y="288" font-size="17">a<tspan baseline-shift="sub" font-size="0.7em">2</tspan></text>
+</g>
+
+<!-- Part IV: the heat kernel at three increasing times. -->
+<g fill="none" stroke-width="1.6">
+<path d="M1420 450 H1770"/>
+<path d="M1595 455 V250" stroke-dasharray="3 6"/>
+<path d="M1545 450 C1575 450 1580 280 1595 280 C1610 280 1615 450 1645 450" stroke-width="2"/>
+<path d="M1490 450 C1550 450 1565 350 1595 350 C1625 350 1640 450 1700 450" stroke-width="2"/>
+<path d="M1430 450 C1520 450 1550 395 1595 395 C1640 395 1670 450 1760 450" stroke-width="2"/>
+</g>
+<g stroke="none" font-style="italic" font-size="18">
+<text x="1600" y="474">ξ</text>
+<text x="1612" y="282">K(x, t; ξ, t<tspan baseline-shift="sub" font-size="0.7em">0</tspan>)</text>
+</g>
+</svg>
