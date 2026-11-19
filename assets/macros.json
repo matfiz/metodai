@@ -1,0 +1,394 @@
+{
+  "schemaVersion": 1,
+  "description": "Executable mathematical notation. Edit this file; generated TeX/web definitions must not be edited separately.",
+  "palette": {
+    "accent": "78003F",
+    "accentdark": "4D002F",
+    "bgtint": "FBF4F7",
+    "bgthm": "F5F7F9",
+    "rulegray": "B9C2CC"
+  },
+  "macros": {
+    "\\R": {
+      "args": 0,
+      "tex": "\\mathbb{R}",
+      "meaning": "real numbers",
+      "sample": "\\R"
+    },
+    "\\C": {
+      "args": 0,
+      "tex": "\\mathbb{C}",
+      "meaning": "complex numbers",
+      "sample": "\\C"
+    },
+    "\\N": {
+      "args": 0,
+      "tex": "\\mathbb{N}",
+      "meaning": "nonnegative integers; explicitly state when starting at one",
+      "sample": "\\N"
+    },
+    "\\Z": {
+      "args": 0,
+      "tex": "\\mathbb{Z}",
+      "meaning": "integers",
+      "sample": "\\Z"
+    },
+    "\\F": {
+      "args": 0,
+      "tex": "\\mathbb{F}",
+      "meaning": "scalar field, real or complex",
+      "sample": "\\F"
+    },
+    "\\iu": {
+      "args": 0,
+      "tex": "\\mathrm{i}",
+      "meaning": "imaginary unit, distinguished from an index",
+      "sample": "\\iu^2=-1"
+    },
+    "\\ee": {
+      "args": 0,
+      "tex": "\\mathrm{e}",
+      "meaning": "exponential base",
+      "sample": "\\ee^{\\iu x}"
+    },
+    "\\dd": {
+      "args": 0,
+      "tex": "\\mathop{}\\!\\mathrm{d}",
+      "meaning": "ordinary differential or integration measure; it spaces itself, so no \\, precedes it",
+      "sample": "\\int_0^1 x\\dd x"
+    },
+    "\\abs": {
+      "args": 1,
+      "tex": "\\left\\lvert#1\\right\\rvert",
+      "meaning": "absolute value or complex modulus",
+      "sample": "\\abs{1+\\iu}"
+    },
+    "\\norm": {
+      "args": 1,
+      "tex": "\\left\\lVert#1\\right\\rVert",
+      "meaning": "norm; specify underlying space or weight",
+      "sample": "\\norm{u}_{L^2}"
+    },
+    "\\set": {
+      "args": 1,
+      "tex": "\\left\\{#1\\right\\}",
+      "meaning": "set braces",
+      "sample": "\\set{x\\in\\R:x>0}"
+    },
+    "\\vv": {
+      "args": 1,
+      "tex": "\\boldsymbol{#1}",
+      "meaning": "physical or coordinate vector",
+      "sample": "\\vv{x}",
+      "redefine": true
+    },
+    "\\unitvec": {
+      "args": 1,
+      "tex": "\\widehat{\\boldsymbol{e}}_{#1}",
+      "meaning": "orthonormal physical coordinate basis",
+      "sample": "\\unitvec{r}"
+    },
+    "\\conj": {
+      "args": 1,
+      "tex": "\\overline{#1}",
+      "meaning": "complex conjugation",
+      "sample": "\\conj{z}"
+    },
+    "\\Re": {
+      "args": 0,
+      "tex": "\\operatorname{Re}",
+      "meaning": "real part, printed upright",
+      "sample": "\\Re z",
+      "redefine": true
+    },
+    "\\Im": {
+      "args": 0,
+      "tex": "\\operatorname{Im}",
+      "meaning": "imaginary part, printed upright",
+      "sample": "\\Im z",
+      "redefine": true
+    },
+    "\\Arg": {
+      "args": 0,
+      "tex": "\\operatorname{Arg}",
+      "meaning": "principal argument, -pi < Arg z < pi on the plane cut along the nonpositive real axis",
+      "sample": "\\Arg(-\\iu)=-\\pi/2"
+    },
+    "\\Log": {
+      "args": 0,
+      "tex": "\\operatorname{Log}",
+      "meaning": "complex logarithm on a stated branch; principal branch ln|z| + i Arg z",
+      "sample": "\\Log z=\\ln\\abs z+\\iu\\Arg z"
+    },
+    "\\adj": {
+      "args": 0,
+      "tex": "\\dagger",
+      "meaning": "Hilbert adjoint or conjugate transpose",
+      "sample": "A^{\\adj}"
+    },
+    "\\T": {
+      "args": 0,
+      "tex": "\\mathsf{T}",
+      "meaning": "ordinary transpose",
+      "sample": "A^{\\T}"
+    },
+    "\\inner": {
+      "args": 2,
+      "tex": "\\left\\langle#1,#2\\right\\rangle",
+      "meaning": "inner product, conjugate-linear first and linear second",
+      "sample": "\\inner{u}{v}"
+    },
+    "\\braket": {
+      "args": 2,
+      "tex": "\\left\\langle#1\\middle\\vert#2\\right\\rangle",
+      "meaning": "same inner product in Dirac notation",
+      "sample": "\\braket{u}{v}"
+    },
+    "\\ket": {
+      "args": 1,
+      "tex": "\\left\\lvert#1\\right\\rangle",
+      "meaning": "Dirac ket when useful",
+      "sample": "\\ket{u}"
+    },
+    "\\bra": {
+      "args": 1,
+      "tex": "\\left\\langle#1\\right\\rvert",
+      "meaning": "Dirac bra when useful",
+      "sample": "\\bra{u}"
+    },
+    "\\distpair": {
+      "args": 2,
+      "tex": "\\left\\langle#1,#2\\right\\rangle",
+      "meaning": "linear distribution/test pairing; no conjugation",
+      "sample": "\\distpair{T}{\\psi}"
+    },
+    "\\Hil": {
+      "args": 0,
+      "tex": "\\mathcal{H}",
+      "meaning": "Hilbert space",
+      "sample": "\\Hil"
+    },
+    "\\dom": {
+      "args": 0,
+      "tex": "\\operatorname{Dom}",
+      "meaning": "operator domain",
+      "sample": "\\dom(A)"
+    },
+    "\\spec": {
+      "args": 0,
+      "tex": "\\operatorname{spec}",
+      "meaning": "operator spectrum",
+      "sample": "\\spec(A)"
+    },
+    "\\spn": {
+      "args": 0,
+      "tex": "\\operatorname{span}",
+      "meaning": "linear span",
+      "sample": "\\spn\\set{u,v}"
+    },
+    "\\diag": {
+      "args": 0,
+      "tex": "\\operatorname{diag}",
+      "meaning": "diagonal matrix",
+      "sample": "\\diag(1,2)"
+    },
+    "\\tr": {
+      "args": 0,
+      "tex": "\\operatorname{tr}",
+      "meaning": "matrix trace",
+      "sample": "\\tr A"
+    },
+    "\\rank": {
+      "args": 0,
+      "tex": "\\operatorname{rank}",
+      "meaning": "matrix or linear-map rank",
+      "sample": "\\rank A"
+    },
+    "\\defeq": {
+      "args": 0,
+      "tex": "\\mathrel{:=}",
+      "meaning": "definition equality",
+      "sample": "a\\defeq b"
+    },
+    "\\grad": {
+      "args": 0,
+      "tex": "\\nabla",
+      "meaning": "gradient",
+      "sample": "\\grad u"
+    },
+    "\\divergence": {
+      "args": 0,
+      "tex": "\\nabla\\!\\cdot",
+      "meaning": "divergence",
+      "sample": "\\divergence\\vv{v}"
+    },
+    "\\curl": {
+      "args": 0,
+      "tex": "\\nabla\\!\\times",
+      "meaning": "curl",
+      "sample": "\\curl\\vv{v}"
+    },
+    "\\laplacian": {
+      "args": 0,
+      "tex": "\\nabla^2",
+      "meaning": "scalar Laplacian; sign fixed by the operator",
+      "sample": "\\laplacian u"
+    },
+    "\\odeop": {
+      "args": 0,
+      "tex": "\\mathcal{A}",
+      "meaning": "differential operator, with domain stated",
+      "sample": "\\odeop u"
+    },
+    "\\Wronskian": {
+      "args": 0,
+      "tex": "\\operatorname{W}",
+      "meaning": "Wronskian, columns are solutions and rows derivatives",
+      "sample": "\\Wronskian(y_1,y_2)"
+    },
+    "\\Heaviside": {
+      "args": 0,
+      "tex": "\\Theta",
+      "meaning": "Heaviside step distribution",
+      "sample": "\\Heaviside(t)"
+    },
+    "\\dirac": {
+      "args": 0,
+      "tex": "\\delta",
+      "meaning": "Dirac distribution; show the argument/dimension",
+      "sample": "\\dirac(x-a)"
+    },
+    "\\testspace": {
+      "args": 0,
+      "tex": "\\mathcal{D}",
+      "meaning": "compactly supported smooth tests on the stated open set",
+      "sample": "\\testspace(\\Omega)"
+    },
+    "\\Schwartz": {
+      "args": 0,
+      "tex": "\\mathcal{S}",
+      "meaning": "rapidly decreasing smooth test functions",
+      "sample": "\\Schwartz(\\R)"
+    },
+    "\\tempered": {
+      "args": 0,
+      "tex": "\\mathcal{S}'",
+      "meaning": "tempered distributions",
+      "sample": "\\tempered(\\R)"
+    },
+    "\\pv": {
+      "args": 0,
+      "tex": "\\operatorname{pv}",
+      "meaning": "Cauchy principal value, not an ordinary improper integral",
+      "sample": "\\pv\\!\\int_{-1}^{1}\\frac{\\dd x}{x}"
+    },
+    "\\sgn": {
+      "args": 0,
+      "tex": "\\operatorname{sgn}",
+      "meaning": "sign function: sgn x = 1 for x > 0, -1 for x < 0; its value at 0 is stated where it matters (Lectures 22-24)",
+      "sample": "\\sgn x=2\\Heaviside(x)-1"
+    },
+    "\\supp": {
+      "args": 0,
+      "tex": "\\operatorname{supp}",
+      "meaning": "support of a test function or distribution (closure of the set where it is nonzero)",
+      "sample": "\\supp\\psi\\subset[-1,1]"
+    },
+    "\\Si": {
+      "args": 0,
+      "tex": "\\operatorname{Si}",
+      "meaning": "sine integral Si(x) = integral from 0 to x of sin t/t dt (GM 27); Si(infinity) = pi/2 (Lecture 20)",
+      "sample": "\\Si(x)=\\int_0^x\\frac{\\sin t}{t}\\dd t"
+    },
+    "\\Res": {
+      "args": 0,
+      "tex": "\\operatorname{Res}",
+      "meaning": "complex residue, with location explicit",
+      "sample": "\\Res_{z=0}\\frac{1}{z}"
+    },
+    "\\FT": {
+      "args": 1,
+      "tex": "\\mathcal{F}\\!\\left[#1\\right]",
+      "meaning": "unitary negative-forward Fourier transform",
+      "sample": "\\FT{f}(k)"
+    },
+    "\\IFT": {
+      "args": 1,
+      "tex": "\\mathcal{F}^{-1}\\!\\left[#1\\right]",
+      "meaning": "inverse Fourier transform with positive exponential",
+      "sample": "\\IFT{\\widehat f}(x)"
+    },
+    "\\LT": {
+      "args": 1,
+      "tex": "\\mathcal{L}\\!\\left[#1\\right]",
+      "meaning": "one-sided causal Laplace transform",
+      "sample": "\\LT{f}(s)"
+    },
+    "\\ILT": {
+      "args": 1,
+      "tex": "\\mathcal{L}^{-1}\\!\\left[#1\\right]",
+      "meaning": "Bromwich inverse, under stated hypotheses",
+      "sample": "\\ILT{F}(t)"
+    },
+    "\\conv": {
+      "args": 0,
+      "tex": "\\ast",
+      "meaning": "convolution, not pointwise multiplication",
+      "sample": "f\\conv g"
+    },
+    "\\expect": {
+      "args": 1,
+      "tex": "\\mathbb{E}\\!\\left[#1\\right]",
+      "meaning": "probabilistic expectation",
+      "sample": "\\expect{X}"
+    },
+    "\\Var": {
+      "args": 0,
+      "tex": "\\operatorname{Var}",
+      "meaning": "probabilistic variance",
+      "sample": "\\Var(X)"
+    },
+    "\\Cov": {
+      "args": 0,
+      "tex": "\\operatorname{Cov}",
+      "meaning": "probabilistic covariance",
+      "sample": "\\Cov(X,Y)"
+    },
+    "\\diffusion": {
+      "args": 0,
+      "tex": "D",
+      "meaning": "diffusion coefficient, with second increment moment 2D h",
+      "sample": "\\diffusion>0"
+    },
+    "\\Lag": {
+      "args": 0,
+      "tex": "L",
+      "meaning": "Lagrangian, distinct from calligraphic Laplace transform",
+      "sample": "\\Lag(q,\\dot q,t)"
+    },
+    "\\Ham": {
+      "args": 0,
+      "tex": "H",
+      "meaning": "Hamiltonian, distinct from step Theta and Hilbert H",
+      "sample": "\\Ham(q,p,t)"
+    },
+    "\\firstvar": {
+      "args": 3,
+      "tex": "\\delta #1\\!\\left[#2;#3\\right]",
+      "meaning": "directional first variation of a functional",
+      "sample": "\\firstvar{J}{y}{\\eta}"
+    },
+    "\\bigO": {
+      "args": 1,
+      "tex": "\\mathcal{O}\\!\\left(#1\\right)",
+      "meaning": "order bound, with limit and uniformity declared",
+      "sample": "\\bigO{\\varepsilon^2}"
+    },
+    "\\littleo": {
+      "args": 1,
+      "tex": "o\\!\\left(#1\\right)",
+      "meaning": "little-o estimate, with limit declared",
+      "sample": "\\littleo{h}"
+    }
+  }
+}
